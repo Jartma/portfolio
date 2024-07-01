@@ -4,9 +4,9 @@ body {
     background-color: #24293E;
     color: #F4F5FC;
     text-align: center;
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Arrange elements vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -14,32 +14,30 @@ header {
     color: #F4F5FC;
     padding: 20px;
     text-align: center;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.name-btn, .get-in-touch-btn {
+    background-color: transparent;
+    color: #8EBBFF;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
 }
 
 .name-btn {
-    position: absolute;
-    top: 20px;
     left: 20px;
-    background-color: transparent;
-    color: #8EBBFF;
-    padding: 10px 20px;
-    border: 2px;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .get-in-touch-btn {
-    position: absolute;
-    top: 20px;
     right: 20px;
-    background-color: transparent;
-    color: #8EBBFF;
-    padding: 10px 20px;
-    border: 2px solid #8EBBFF;
+    border-color: #8EBBFF;
     border-radius: 20px;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .get-in-touch-btn:hover {
@@ -47,11 +45,15 @@ header {
     color: #24293E;
 }
 
+a, a:visited, a:hover, a:active {
+    color: #8EBBFF;
+  }
+
 .portrait {
-    width: 200px;
+    width: 400px;
     height: auto;
-    margin-right: 5px;
-    border-radius: 300px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 section {
@@ -60,8 +62,12 @@ section {
 
 .container {
     display: flex;
-  }
-  
+}
+
+.block {
+    text-align: justify;
+}
+
 .box {
     flex: 1;
     padding: 20px;
@@ -70,6 +76,65 @@ section {
     color: #8EBBFF;
     border: 2px solid #8EBBFF;
     border-radius: 20px;
+}
+
+.icons {
+    width: 20%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.container_projects {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box-projects {
+    flex: 0 1 calc(25% - 20px);
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.box-projects .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: 24293E(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F4F5FC;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.box-projects:hover .overlay {
+    opacity: 1;
+}
+
+.box-projects:hover .project-image {
+    filter: blur(5px) brightness(50%);
+}
+
+
+.project-image {
+    width: 98%;
+    height: auto;
+    border-radius: 20px;
+    border: 2px solid #8EBBFF;
+    cursor: pointer;
+    transition: filter 0.3s ease;
 }
 
 .linkedin_logo {
@@ -84,43 +149,4 @@ footer {
     padding: 20px;
     bottom: 0;
     width: 100%;
-}
-
-.project {
-    margin-bottom: 20px;
-}
-
-.icons {
-    width: 20%;
-    height: auto;
-    margin-right: 20px;
-}
-
-.container_projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.box-projects {
-    flex: 0 1 calc(25% - 20px);
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid #8EBBFF;
-    border-radius: 20px;
-    text-align: center;
-    box-sizing: border-box; 
-    cursor: pointer;
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-}
-
-.project-title {
-    margin-top: 10px; 
-    margin-bottom: 10px; 
-    font-size: 1.2em; 
-    color: #8EBBFF;
 }
