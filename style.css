@@ -123,6 +123,7 @@ section {
 
 .box-projects:hover .overlay {
     opacity: 1;
+    flex-direction: column;
 }
 
 .box-projects:hover .project-image {
@@ -131,6 +132,7 @@ section {
 
 .logos {
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 .logos img {
