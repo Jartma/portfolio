@@ -65,10 +65,6 @@ section {
     display: flex;
 }
 
-.block {
-    text-align: justify;
-}
-
 .box {
     flex: 1;
     padding: 20px;
